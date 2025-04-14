@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: #0d0d0d;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Light Theme */
+  body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+  }
+
+  header.light-theme {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bfa6;
+  }
+
+  nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  header.light-theme nav a {
+    color: #333;
+  }
+
+  nav a:hover {
+    color: #00bfa6;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .search-bar input {
+    padding: 0.5rem 2rem 0.5rem 1rem; /* Added space for icon */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1rem;
+  }
+
+  .search-bar i {
+    position: absolute;
+    left: 0.7rem;
+    color: #aaa;
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 4rem 2rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00bfa6;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    color: #00bfa6;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ccc;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .card {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+  }
+
+  .card.light-theme {
+    background: #fff;
+    color: #333;
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    margin: 1rem 0 0.5rem;
+  }
+
+  .card audio {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: none;
+    background: #222;
+    color: white;
+  }
+
+  form button {
+    background-color: #00bfa6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  form button:hover {
+    background-color: #009d8c;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+
+  .profile-info img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .card {
+      width: 90%;
+    }
+
+    nav {
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+    }
+  }

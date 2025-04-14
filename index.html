@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podcastr</title>
+  <link rel="stylesheet" href="style.css"> <!-- Font Awesome link -->
+  <script src="script.js">
+    // Switch theme function
+    
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">🎙️ AI Podcast</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#discover">Discover</a>
+      <a href="#create">Create</a>
+      <a href="#profile">Profile</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search Podcasts..." onkeyup="filterPodcasts()">
+      <i class="fas fa-search"></i> <!-- Search icon -->
+    </div>
+    <button onclick="toggleTheme()" style="background: none; border: none; color: #00bfa6; font-weight: bold;">Toggle Theme</button>
+  </header>
+
+  <!-- 🏠 Home Section -->
+  <section id="home" class="hero">
+    <h2>🎧 Latest Podcasts</h2>
+    <div id="podcastFeed" style="margin-top: 20px;"></div>
+    <h1>Welcome to AI Podcast</h1>
+    <p>Discover, create, and enjoy personalized AI-powered podcasts anytime, anywhere.</p>
+  </section>
+
+  <!-- 🔍 Discover Section -->
+  <section id="discover">
+    <h2 class="section-title">Discover Podcasts</h2>
+    <div class="card-grid">
+      <!-- Podcast 1 -->
+      <div class="card">
+        <img src="pd3.jpg" alt="Podcast 1">
+        <h3>Tech Talks</h3>
+        <audio controls>
+          <source src="YouTube [gzrRuTBybyM].mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 2 -->
+      <div class="card">
+        <img src="pd1.jpg" alt="Podcast 2">
+        <h3>AI Weekly</h3>
+        <audio controls>
+          <source src="Tools for Better Productivity  Time Management _ Dr Adam Grant  Dr Andrew Huberman.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 3 -->
+      <div class="card">
+        <img src="pd2.jpg" alt="Podcast 3">
+        <h3>Health Care</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 4 -->
+      <div class="card">
+        <img src="images.png" alt="Podcast 4">
+        <h3>Future Trends</h3>
+        <audio controls>
+          <source src="videoplayback (1).weba" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 5 -->
+      <div class="card">
+        <img src="pd1.jpg" alt="Podcast 5">
+        <h3>Design Insights</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 6 -->
+      <div class="card">
+        <img src="images (2).jpg" alt="Podcast 6">
+        <h3>Marketing Mastery</h3>
+        <audio controls>
+          <source src="" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 7 -->
+      <div class="card">
+        <img src="images (1).jpg" alt="Podcast 7">
+        <h3>Productivity Hacks</h3>
+        <audio controls>
+          <source src="videoplayback.weba" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 8 -->
+      <div class="card">
+        <img src="pd1.jpg" alt="Podcast 8">
+        <h3>Personal Growth</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 9 -->
+      <div class="card">
+        <img src="pd5.jpg" alt="Podcast 9">
+        <h3>Fitness Goals</h3>
+        <audio controls>
+          <source src="Tools for Better Productivity  Time Management _ Dr Adam Grant  Dr Andrew Huberman.mp3.crdownload" type="audio/mp3">
+        </audio>
+      </div>
+      <!-- Podcast 10 -->
+      <div class="card">
+        <img src="images.jpg" alt="Podcast 10">
+        <h3>Travel Diaries</h3>
+        <audio controls>
+          <source src="videoplayback.weba" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎙️ Create Section -->
+  <section id="create">
+    <h2>🎧 Browse Podcasts</h2>
+    <label for="podcastSelector"><strong>Select a Podcast:</strong></label>
+    <select id="podcastSelector" style="margin-left: 10px; padding: 5px;">
+      <option value="https://rss.art19.com/the-daily">The Daily (NYT)</option>
+      <option value="https://feeds.npr.org/510289/podcast.xml">Planet Money (NPR)</option>
+      <option value="https://feeds.npr.org/510325/podcast.xml">The Indicator (NPR)</option>
+      <option value="https://feeds.megaphone.fm/NBCDateline">Dateline NBC</option>
+      <option value="https://feeds.simplecast.com/54nAGcIl">SmartLess</option>
+    </select>
+    <div id="podcastFeed" style="margin-top: 20px;"></div>
+    <h2 class="section-title">Create a Podcast</h2>
+    <form>
+      <input type="text" placeholder="Podcast Title" required />
+      <textarea placeholder="Podcast Description" rows="4" required></textarea>
+      <input type="file" accept="audio/*" />
+      <button type="submit">Upload Podcast</button>
+    </form>
+  </section>
+
+  <!-- 👤 Profile Section -->
+  <section id="profile">
+    <h2 class="section-title">My Profile</h2>
+    <div class="profile-info">
+      <img src="pd4.jpg" alt="User">
+      <h3>Username</h3>
+      <p>Email: user@example.com</p>
+      <p>Podcasts Created: 3</p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
